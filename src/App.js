@@ -1,34 +1,60 @@
 import React from 'react';
 import './App.css';
-import DIO from './images/DIO.png'
+
+var currentPoint = 0;
+var currentImage = 0;
+
+function previous(){
+  var slider = document.querySelector('.container');
+  if(currentImage === 0){
+    currentPoint = -900;
+    slider.style.top = `${-300 * 3}px`;
+    currentImage = 3;
+  }
+  else{
+    currentImage -= 1;
+    currentPoint += 300;
+    slider.style.top = `${currentPoint}px`;
+  }
+}
+
+function next(){
+  var slider = document.querySelector('.container');
+  if(currentImage === 3){
+    slider.style.top = "0%";
+    currentImage = 0;
+    currentPoint = 0;
+  }
+  else{
+    currentImage += 1;
+    currentPoint -= 300;
+    slider.style.top = `${currentPoint}px`;
+  }
+}
+
 
 function App() {
   return (
     <React.Fragment>
       <div className="topDiv">
-        <svg>
-          <polygon points="0,0 0,1000, 1400,0 0,0"></polygon>
+        <svg className = "mySvg">
+          <polygon points = "0,0 0,1000, 1360,0 0,0"></polygon>
         </svg>
       </div>
       <div className = "title">
         <h1>Stardust Crusaders</h1>
       </div>
-      <div className = "about">
-        <h2>Quando acontece?</h2>
-        <p>
-          A história acontece em 1989, começando com o Jotaro, protagonista da série,
-          na prisão.
-        </p>
-        <h2>Sinopse:</h2>
-        <p>
-          Jotaro estava na prisão, por pedido dele mesmo, pois manifestou um poder sobrenatural,
-          conhecido como Stand. Após um tempo e encontro com Joseph e seu amigo, Avdol, e posteriormente
-          Kakkyoin, os quatro vão em direção ao Egito, para matar DIO e salvar a mãe de Jotaro, que estava
-          tendo complicações, por causa do stand.
-        </p>
+      <button onClick={previous} className="previousButton"></button>
+      <div className = "partImages">
+        <div className = "container">
+          <div className="backgroundWallpaper" id="i0"></div>
+          <div className="backgroundWallpaper" id="i1"></div>
+          <div className="backgroundWallpaper" id="i2"></div>
+          <div className="backgroundWallpaper" id="i3"></div>
+        </div>
       </div>
+      <button onClick={next} className="nextButton"></button>
       <div className="image">
-        <img src={DIO}></img>
       </div>
     </React.Fragment>
   );

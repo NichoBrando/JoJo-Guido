@@ -1,6 +1,7 @@
-*{margin: 0; padding: 0; box-sizing: content-box; font-family: 'Anton', sans-serif; color: white;}
+*{margin: 0; padding: 0; box-sizing: content-box; font-family: 'Anton', sans-serif; color: black;}
 html, body{min-height: 100%;}
 body{background-color: black;}
+::selection{background:rgba(0,0,0,0); color: white;}
 #root{
   position: absolute;
   min-height: 100%;
@@ -17,7 +18,8 @@ svg{
   height: 100%;
   width: 100%;
   z-index: 1;
-  fill: goldenrod;
+  fill: gold;
+  transition: 0.5s fill;
 }
 .title{
   z-index: 2;
@@ -26,27 +28,81 @@ svg{
   text-align: center;
 }
 .title h1{
-  padding: 20px;
-  font-size: 24px;
-}
-.about{
-  position: absolute;
-  left: 10px;
-  width: 40%;
   padding: 5px;
-  top: 10%;
+  font-size: 48px;
+}
+.partImages{
+  position: absolute;
+  left: 5%;
+  top: 15%;
+  width: 40%;
+  height: 300px;
   z-index: 2;
+  border: 2px double black;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: red;
 }
-.about h2, .about p{
-  font-size: 18px;
+.container{
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  transition: 0.5s top ease-in-out;
+  z-index: 4;
+  overflow: visible;
 }
-.about h2{
-  text-align: center;
-  padding: 20px;
-  font-size: 22px;
+.backgroundWallpaper{
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
-.about p{
-  text-align: justify;
+
+#i0{
+  background: url('./images/stardustcrusaders.jpg');
+}
+#i1{
+  background: url('./images/stardustcrusaders1.jpg');
+}
+#i2{
+  background: url('./images/stardustcrusaders2.jpg');
+}
+#i3{
+  background: url('./images/stardustcrusaders3.jpg');
+}
+#i0, #i1, #i2, #i3{
+  background-size: cover;
+}
+.previousButton{
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  top: 15%;
+  left: 5px;
+  background: url('./images/standarrow.png');
+  background-size: 100% 100%;
+  border: none;
+  z-index: 10;
+  transform: rotate(180deg);
+}
+.nextButton{
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  bottom: 40%;
+  left: 5px;
+  background: url('./images/standarrow.png');
+  background-size: 100% 100%;
+  border: none;
+  z-index: 10;
+}
+.previousButton:focus, .nextButton:focus{
+  outline: none;
 }
 .image{
   position: absolute;
@@ -55,9 +111,6 @@ svg{
   width: 30%;
   right: 0px;
   top: 0px;
-}
-img{
-  z-index: 10;
-  height: 100%;
-  width: 100%;
+  background: url('./images/DIO.png');
+  background-size: cover;
 }
