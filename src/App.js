@@ -1,19 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import DIO from './images/DIO.png'
-import galaxy from './images/galaxy.jpg'
 
 function App() {
   return (
     <React.Fragment>
       <div className="topDiv">
         <svg>
-          <defs>
-            <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
-              <image href={galaxy} x="0" y="0" width="100" height="100" />
-            </pattern>
-          </defs>
           <polygon points="0,0 0,1000, 1400,0 0,0"></polygon>
         </svg>
       </div>
