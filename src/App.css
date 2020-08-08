@@ -18,7 +18,7 @@ svg{
   height: 100%;
   width: 100%;
   z-index: 1;
-  fill: gold;
+  fill: blue;
   transition: 0.5s fill;
 }
 .title{
@@ -44,7 +44,7 @@ svg{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  background-color: red;
+  background-color: black;
 }
 .container{
   position: absolute;
@@ -57,26 +57,140 @@ svg{
   z-index: 4;
   overflow: visible;
 }
-.backgroundWallpaper{
+.phantomblood#i0{
+  background: url('./images/phantomblood0.jpg');
+  background-size: cover;
+}
+.phantomblood#i1{
+  background: url('./images/phantomblood1.jpg');
+  background-size: cover;
+}
+.phantomblood#i2{
+  background: url('./images/phantomblood2.jpg');
+  background-size: cover;
+}
+.phantomblood#i3{
+  background: url('./images/phantomblood3.jpg');
+  background-size: cover;
+}
+.battletendency#i0{
+  background: url('./images/battletendency0.jpg');
+  background-size: cover;
+}
+.battletendency#i1{
+  background: url('./images/battletendency1.jpg');
+  background-size: cover;
+}
+.battletendency#i2{
+  background: url('./images/battletendency2.jpg');
+  background-size: cover;
+}
+.battletendency#i3{
+  background: url('./images/battletendency3.jpg');
+  background-size: cover;
+}
+.stardustcrusaders#i0{
+  background: url('./images/stardustcrusaders0.jpg');
+  background-size: cover;
+}
+.stardustcrusaders#i1{
+  background: url('./images/stardustcrusaders1.jpg');
+  background-size: cover;
+}
+.stardustcrusaders#i2{
+  background: url('./images/stardustcrusaders2.jpg');
+  background-size: cover;
+}
+.stardustcrusaders#i3{
+  background: url('./images/stardustcrusaders3.jpg');
+  background-size: cover;
+}
+.diu#i0{
+  background: url('./images/diu0.jpg');
+  background-size: cover;
+}
+.diu#i1{
+  background: url('./images/diu1.jpg');
+  background-size: cover;
+}
+.diu#i2{
+  background: url('./images/diu2.jpg');
+  background-size: cover;
+}
+.diu#i3{
+  background: url('./images/diu3.jpg');
+  background-size: cover;
+}
+.ventoaureo#i0{
+  background: url('./images/ventoaureo0.jpg');
+  background-size: cover;
+}
+.ventoaureo#i1{
+  background: url('./images/ventoaureo1.jpg');
+  background-size: cover;
+}
+.ventoaureo#i2{
+  background: url('./images/ventoaureo2.jpg');
+  background-size: cover;
+}
+.ventoaureo#i3{
+  background: url('./images/ventoaureo3.jpg');
+  background-size: cover;
+}
+.stoneocean#i0{
+  background: url('./images/stoneocean0.jpg');
+  background-size: cover;
+}
+.stoneocean#i1{
+  background: url('./images/stoneocean1.jpg');
+  background-size: cover;
+}
+.stoneocean#i2{
+  background: url('./images/stoneocean2.jpg');
+  background-size: cover;
+}
+.stoneocean#i3{
+  background: url('./images/stoneocean3.jpg');
+  background-size: cover;
+}
+.sbr#i0{
+  background: url('./images/sbr0.jpg');
+  background-size: cover;
+}
+.sbr#i1{
+  background: url('./images/sbr1.jpg');
+  background-size: cover;
+}
+.sbr#i2{
+  background: url('./images/sbr2.jpg');
+  background-size: cover;
+}
+.sbr#i3{
+  background: url('./images/sbr3.jpg');
+  background-size: cover;
+}
+.jojolion#i0{
+  background: url('./images/jojolion0.jpg');
+  background-size: cover;
+}
+.jojolion#i1{
+  background: url('./images/jojolion1.jpg');
+  background-size: cover;
+}
+.jojolion#i2{
+  background: url('./images/jojolion2.jpg');
+  background-size: cover;
+}
+.jojolion#i3{
+  background: url('./images/jojolion3.jpg');
+  background-size: cover;
+}
+
+#i0, #i1, #i2, #i3{
   position: relative;
   height: 100%;
   width: 100%;
-}
-
-#i0{
-  background: url('./images/stardustcrusaders.jpg');
-}
-#i1{
-  background: url('./images/stardustcrusaders1.jpg');
-}
-#i2{
-  background: url('./images/stardustcrusaders2.jpg');
-}
-#i3{
-  background: url('./images/stardustcrusaders3.jpg');
-}
-#i0, #i1, #i2, #i3{
-  background-size: cover;
+  transition: 0.5s background-image;
 }
 .previousButton{
   position: absolute;
@@ -104,6 +218,34 @@ svg{
 .previousButton:focus, .nextButton:focus{
   outline: none;
 }
+.image#kars{
+  background: url('./images/kars.png');
+  background-size: cover;
+}
+.image#dio{
+  background: url('./images/DIO.png');
+  background-size: cover;
+}
+.image#kira{
+  background: url('./images/kira.png');
+  background-size: cover;
+}
+.image#diavolo{
+  background: url('./images/diavolo.png');
+  background-size: cover;
+}
+.image#pucci{
+  background: url('./images/pucci.png');
+  background-size: cover;
+}
+.image#valentine{
+  background: url('./images/valentine.png');
+  background-size: cover;
+}
+.image#jo2uke{
+  background: url('./images/jo2uke.png');
+  background-size: cover;
+}
 .image{
   position: absolute;
   z-index: 10;
@@ -111,8 +253,6 @@ svg{
   width: 30%;
   right: 0px;
   top: 0px;
-  background: url('./images/DIO.png');
-  background-size: cover;
 }
 .partSymbol{
   position: absolute;
@@ -131,7 +271,7 @@ svg{
   border-radius: 100%;
 }
 .partSymbol div:hover{
-  border: 2px solid red;
+  padding: 2px;
 }
 #p1{
   background-image: url('./images/p1.png');
