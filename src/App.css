@@ -114,3 +114,49 @@ svg{
   background: url('./images/DIO.png');
   background-size: cover;
 }
+.partSymbol{
+  position: absolute;
+  height: 100px;
+  z-index: 10;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+}
+.partSymbol > div{
+  margin-left: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+.partSymbol div:hover{
+  border: 2px solid red;
+}
+#p1{
+  background-image: url('./images/p1.png');
+}
+#p2{
+  background-image: url('./images/p2.png');
+}
+#p3{
+  background-image: url('./images/p3.png');
+}
+#p4{
+  background-image: url('./images/p4.png');
+}
+#p5{
+  background-image: url('./images/p5.png');
+}
+#p6{
+  background-image: url('./images/p6.png');
+}
+#p7{
+  background-image: url('./images/p7.png');
+}
+#p8{
+  background-image: url('./images/p8.png');
+}
+#p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8{
+  background-size: 100% 100%;
+}

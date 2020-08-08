@@ -56,6 +56,16 @@ function App() {
       <button onClick={next} className="nextButton"></button>
       <div className="image">
       </div>
+      <div className = "partSymbol">
+        <div id="p1"></div>
+        <div id="p2"></div>
+        <div id="p3"></div>
+        <div id="p4"></div>
+        <div id="p5"></div>
+        <div id="p6"></div>
+        <div id="p7"></div>
+        <div id="p8"></div>
+      </div>
     </React.Fragment>
   );
 }
