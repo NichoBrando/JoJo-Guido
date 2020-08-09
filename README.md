@@ -1,4 +1,3 @@
-<<<<<<< HEAD
-=======
+# JOJO GUIDO
 
->>>>>>> 966abceeadfca34cd2ab04111ccffedf90f645ca
+![JoJo Guido gif](https://drive.google.com/file/d/1dPpi9L9aKgUGxwvStTce497h1k3baapa/view?usp=sharing)
