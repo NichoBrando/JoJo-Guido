@@ -36,7 +36,7 @@ function next(){
 class App extends React.Component {
   constructor(props){
     super(props);
-    this.state = {'part': 'Phantom Blood'}
+    this.state = {'part': ''}
     this.changePart = this.changePart.bind(this);
   }
   changePart(number){
@@ -109,12 +109,23 @@ class App extends React.Component {
         break;
     }
   }
+  componentDidMount(){
+    this.changePart(1);
+  }
   render(){
+    var partDiv = [];
+    var imgDiv = [];
+    for(let i = 1; i <= 8; i++){
+      partDiv.push(<div id = {'p' + i} onClick = {() => this.changePart(i)}></div>)
+    }
+    for(let i = 0; i < 4; i++){
+      imgDiv.push(<div id={'i' + i}></div>)
+    }
     return (
       <React.Fragment>
         <div className="topDiv">
           <svg className = "mySvg">
-            <polygon points = "0,0 0,1000, 1360,0 0,0"></polygon>
+            <polygon points = "0,0 0,800, 1360,0 0,0"></polygon>
           </svg>
         </div>
         <div className = "title">
@@ -123,24 +134,14 @@ class App extends React.Component {
         <button onClick={previous} className="previousButton"></button>
         <div className = "partImages">
           <div className = "container">
-            <div className="phantomblood" id="i0"></div>
-            <div className="phantomblood" id="i1"></div>
-            <div className="phantomblood" id="i2"></div>
-            <div className="phantomblood" id="i3"></div>
+            {imgDiv.map(element => element)}
           </div>
         </div>
         <button onClick={next} className="nextButton"></button>
-        <div className="image" id="#dio">
+        <div className="image">
         </div>
         <div className = "partSymbol">
-          <div id="p1" onClick = {() => this.changePart(1)}></div>
-          <div id="p2" onClick = {() => this.changePart(2)}></div>
-          <div id="p3" onClick = {() => this.changePart(3)}></div>
-          <div id="p4" onClick = {() => this.changePart(4)}></div>
-          <div id="p5" onClick = {() => this.changePart(5)}></div>
-          <div id="p6" onClick = {() => this.changePart(6)}></div>
-          <div id="p7" onClick = {() => this.changePart(7)}></div>
-          <div id="p8" onClick = {() => this.changePart(8)}></div>
+          {partDiv.map(element => element)}
         </div>
       </React.Fragment>
     );
